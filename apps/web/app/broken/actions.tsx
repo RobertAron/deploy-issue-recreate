@@ -3,6 +3,11 @@
 import { prisma } from "../../other/getPrismaClient";
 
 export async function getData() {
-  const data = await prisma.form_response.findFirst();
-  return data;
+  try{
+    const data = await prisma.form_response.findFirst();
+    return data
+  }
+  catch(err){
+    return err
+  }
 }
