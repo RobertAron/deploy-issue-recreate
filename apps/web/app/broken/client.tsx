@@ -12,7 +12,7 @@ export function ComponentThatCallsAction() {
           data,
         })
       )
-      .catch((err) => setData(err));
+      .catch((err) => setData({err}));
   }, []);
   return <pre>{JSON.stringify(data, null, 2)}</pre>;
 }
