@@ -1,4 +1,4 @@
-import { prisma } from "../../other/getPrismaClient";
+// import { prisma } from "../../other/getPrismaClient";
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
 export const runtime = "nodejs";
@@ -7,10 +7,10 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const response = await prisma.form_response.findFirst();
+  // const response = await prisma.form_response.findFirst();
   return (
     <div>
-      <pre>{JSON.stringify(response, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(response, null, 2)}</pre> */}
       {children}
     </div>
   );
