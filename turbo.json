@@ -28,5 +28,6 @@
       "cache": false
     },
     "lint": {}
-  }
+  },
+  "envMode": "loose"
 }
