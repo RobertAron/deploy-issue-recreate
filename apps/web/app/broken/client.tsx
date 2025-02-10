@@ -8,12 +8,18 @@ export function ComponentThatCallsAction() {
   useEffect(() => {
     getData()
       .then((data) =>
-        setData({
-          datas:"!!!!!",
-          data,
-        })
+        {
+          console.log("success", data)
+          return setData({
+            datas: "!!!!!",
+            data,
+          });
+        }
       )
-      .catch((err) => setData({error:"???",err}));
+      .catch((err) => {
+        console.log('error', err)
+        return setData({ error: "???", err });
+      });
   }, []);
   return <pre>{JSON.stringify(data, null, 2)}</pre>;
 }
