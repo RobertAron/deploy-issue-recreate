@@ -1,5 +1,7 @@
 import { prisma } from "../../other/getPrismaClient";
-
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+export const runtime = "nodejs";
 export default async function Layout({
   children,
 }: {
