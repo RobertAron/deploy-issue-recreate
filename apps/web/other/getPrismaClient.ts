@@ -1,4 +1,4 @@
-import {PrismaClient} from '@repo/database'
+import {PrismaClient} from '@prisma/mono-repo-db'
 
 const prismaSingleton = () => {
   return new PrismaClient({

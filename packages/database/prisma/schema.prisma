@@ -1,7 +1,7 @@
 // Just trying to re-use another DB that I already have up... The content here doesn't mater.
 generator client {
   provider = "prisma-client-js"
-  output = "../dist"
+  output = "../../../node_modules/@prisma/mono-repo-db"
   // 
 }
 
