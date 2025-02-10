@@ -1,0 +1,19 @@
+// Just trying to re-use another DB that I already have up... The content here doesn't mater.
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/client"
+  // 
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL_NON_POOLING")
+}
+
+model form_response {
+  user_id     String
+  question_id String
+  response    String
+
+  @@unique([user_id, question_id])
+}
