@@ -32,5 +32,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "pkg": {
+    "assets": ["node_modules/.prisma/client/*.node"]
+  }
 }
