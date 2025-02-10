@@ -9,10 +9,11 @@ export function ComponentThatCallsAction() {
     getData()
       .then((data) =>
         setData({
+          datas:"!!!!!",
           data,
         })
       )
-      .catch((err) => setData({err}));
+      .catch((err) => setData({error:"???",err}));
   }, []);
   return <pre>{JSON.stringify(data, null, 2)}</pre>;
 }
