@@ -1,5 +1,5 @@
 import {prisma1} from '../../getPrismaClient'
-
+// Removing this layout fixes the problem...
 export const dynamic = 'force-dynamic'
 export default async function RootLayout({
   children,
