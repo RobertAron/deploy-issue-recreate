@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { prisma1 } from "../getPrismaClient";
-import { ClientThing } from "./client";
+// import { ClientThing } from "./client";
 
 export const dynamic = "force-dynamic";
 export default async function IndexPage() {
@@ -12,7 +12,7 @@ export default async function IndexPage() {
       <pre>{JSON.stringify(users, null, 2)}</pre>
       <Link href='/other'>other page</Link>
       {/* Adding this client component fixes the problem... */}
-      <ClientThing />
+      {/* <ClientThing /> */}
     </div>
   );
 }
