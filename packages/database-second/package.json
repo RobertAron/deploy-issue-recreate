@@ -1,8 +1,6 @@
 {
-  "name": "@repo/database",
+  "name": "@repo/database-second",
   "version": "1.0.0",
-  "main": "generated/client/default.js",
-  "types": "generated/client/default.d.ts",
   "exports": {
     ".": {
       "require": {

@@ -1,0 +1,22 @@
+// Just trying to re-use another DB that I already have up... The content here doesn't mater.
+generator client {
+  provider = "prisma-client-js"
+  output = "../generated/client"
+  // 
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL_NON_POOLING")
+}
+
+model randomized_user_questions {
+  user_id            String
+  // I named these badly :/
+  // relates to which order the questions should be asked in (which page)
+  question_index     Int
+  // relates to which question to ask
+  question           Int
+
+  @@unique([user_id, question_index])
+}
