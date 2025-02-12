@@ -11,6 +11,7 @@ export default async function IndexPage() {
       <h1>Hello World</h1>
       <pre>{JSON.stringify(users, null, 2)}</pre>
       <Link href='/other'>other page</Link>
+      {/* Adding this client component fixes the problem... */}
       <ClientThing />
     </div>
   );

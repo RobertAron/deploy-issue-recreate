@@ -7,7 +7,7 @@ module.exports = {
   reactStrictMode: true,
   webpack: (config, { isServer }) => {
     if (isServer) {
-      config.plugins = [...config.plugins, new PrismaPlugin()];
+      config.plugins = [...config.plugins];
     }
     return config;
   },
